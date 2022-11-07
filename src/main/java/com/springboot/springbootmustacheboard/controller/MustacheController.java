@@ -12,6 +12,7 @@ public class MustacheController {
     @GetMapping(value="/hi")
     public String mustacheCon1(Model model){
         model.addAttribute("username", "user");
+        model.addAttribute("id", "manager");
         return "greetings";
     }
 
