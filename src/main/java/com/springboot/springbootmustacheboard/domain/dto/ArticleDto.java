@@ -1,5 +1,6 @@
 package com.springboot.springbootmustacheboard.domain.dto;
 
+import com.springboot.springbootmustacheboard.domain.entity.Article;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -16,4 +17,7 @@ public class ArticleDto {
         this.content = content;
     }
 
+    public Article toEntity(){
+        return new Article(title, content);
+    }
 }
